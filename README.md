@@ -40,15 +40,23 @@ The app is able to answer the following questions:
 7. How many siblings/spouses aboard on average, by passenger class? By survival?
 8. How many parents/children aboard on average, by passenger class? By survival?
 
-## Example #1: How many passengers survived?
+### Example #1: How many passengers survived?
 
 ```html
 342 passengers survived.
 ```
 
-## Example #2: How many passengers were in each class?
+### Example #2: How many passengers were in each class?
 
 ```html
 There were 216 passengers in first class, 184 passengers in second class, and
 491 passengers in third class.
 ```
+
+## Run on development mode
+
+Remember to rename the file `.env.example` to `.env.local` and fill in with your [OpenAI API key](https://platform.openai.com/account/api-keys)
+
+
+```shell
+npm run dev
