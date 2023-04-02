@@ -1,18 +1,16 @@
-# Research LangChain with the Titanic SQLite Database
+# NextJS App using LangChain, Titanic SQLite Database and the API of OpenAI
 
-The main goal of this notebook is to use the Titanic SQLite database to explore the [LangChain](https://js.langchain.com/) library.
+The main goal of this app is to use the Titanic SQLite database to explore the [LangChain](https://js.langchain.com/) library and the API of [OpenAI](https://openai.com/).
 
 I'm using the [SqlDatabaseChain](https://js.langchain.com/docs/modules/chains/other_chains/sql) of LangChain in order to interact with the database in a natural language way on the client side.
 
-I'm also using Next.js to create a simple web application that allows me to interact with the database.
+I'm also using [Next.js](https://nextjs.org/) to create a simple web application that allows me to interact with the database through the API of OpenAI.
+
+I made a similar approach with [Jupyter Notebook](https://github.com/brunogarcia/langchain-titanic-sqlite).
 
 ## Database
 
 The table is called `titanic` and has the following columns.
-
-🥳 Amazing: even the this table was created using natural language:
-
-> "Give the column name, data type and description of the table titanic in markdown format"
 
 | Column Name | Data Type | Description                           |
 | ----------- | --------- | ------------------------------------- |
@@ -31,7 +29,7 @@ The table is called `titanic` and has the following columns.
 
 ## Answering the questions with natural language
 
-After the configuration the agent is able to answer the following questions:
+The app is able to answer the following questions:
 
 1. How many passengers survived?
 2. How many passengers were in each class?
@@ -45,12 +43,12 @@ After the configuration the agent is able to answer the following questions:
 ## Example #1: How many passengers survived?
 
 ```html
-' 342 passengers survived.'
+342 passengers survived.
 ```
 
 ## Example #2: How many passengers were in each class?
 
 ```html
-' There were 216 passengers in first class, 184 passengers in second class, and
-491 passengers in third class.'
+There were 216 passengers in first class, 184 passengers in second class, and
+491 passengers in third class.
 ```
