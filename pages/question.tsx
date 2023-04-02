@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function PageWithJSbasedForm() {
+export default function Question() {
   const [loader, setLoader] = useState(false);
   const [answer, setAnswer] = useState("");
 
