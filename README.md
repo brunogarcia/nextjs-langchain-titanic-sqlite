@@ -1,18 +1,25 @@
-# NextJS App using LangChain, Titanic SQLite Database and the API of OpenAI
+# App using LangChain, Titanic SQLite Database and the API of OpenAI
 
-The main goal of this app is to use the Titanic SQLite database to explore the [LangChain](https://js.langchain.com/) library and the API of [OpenAI](https://openai.com/).
+## Description
 
-I'm using the [SqlDatabaseChain](https://js.langchain.com/docs/modules/chains/other_chains/sql) of LangChain in order to interact with the database in a natural language way on the client side.
-
-I'm also using [Next.js](https://nextjs.org/) to create a simple web application that allows me to interact with the database through the API of OpenAI.
-
-I made a similar approach with [Jupyter Notebook](https://github.com/brunogarcia/langchain-titanic-sqlite).
+The main goal of both projects is to research about the LangChain library and the API of OpenAI using the Titanic SQLite database.
 
 ![How Is It Work?](how-is-it-work.png)
+
+## How is it working?
+
+- First, the [API of OpenAI](https://openai.com/blog/openai-api) allows me to use the [GPT-3](https://openai.com/blog/gpt-3-apps/) model at a very cheap price.
+  The total cost of the research was $0.36.
+- Then, the [LangChain](https://python.langchain.com/) library allows me to connect the OpenAI API and the Titanic Database in a very simple way.
+- Finally, [Next.js](https://nextjs.org/) let me create a simple web application that allows the final user to interact with the database in a natural language.
 
 ## Database
 
 The table is called `titanic` and has the following columns.
+
+🥳 Amazing: even the this table was created using natural language:
+
+> "Give the column name, data type and description of the table titanic in markdown format"
 
 | Column Name | Data Type | Description                           |
 | ----------- | --------- | ------------------------------------- |
@@ -31,7 +38,7 @@ The table is called `titanic` and has the following columns.
 
 ## Answering the questions with natural language
 
-The app is able to answer the following questions:
+The app and the notebook are able to answer the following questions in natural language:
 
 1. How many passengers survived?
 2. How many passengers were in each class?
@@ -51,8 +58,8 @@ The app is able to answer the following questions:
 ### Example #2: How many passengers were in each class?
 
 ```html
-There were 216 passengers in first class, 184 passengers in second class, and
-491 passengers in third class.
+There were 216 passengers in first class, 184 passengers in second class, and 491 passengers in
+third class.
 ```
 
 ## Run on development mode
