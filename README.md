@@ -8,6 +8,8 @@ I'm also using [Next.js](https://nextjs.org/) to create a simple web application
 
 I made a similar approach with [Jupyter Notebook](https://github.com/brunogarcia/langchain-titanic-sqlite).
 
+![How Is It Work?](how-is-it-work.png)
+
 ## Database
 
 The table is called `titanic` and has the following columns.
@@ -57,6 +59,6 @@ There were 216 passengers in first class, 184 passengers in second class, and
 
 Remember to rename the file `.env.example` to `.env.local` and fill in with your [OpenAI API key](https://platform.openai.com/account/api-keys)
 
-
 ```shell
 npm run dev
+```
