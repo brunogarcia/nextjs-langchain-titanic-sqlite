@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { DataSource } from "typeorm";
 import { OpenAI } from "langchain/llms";
@@ -27,19 +26,20 @@ export default async function handler(
     res.status(400).json({ answer: "No question provided" });
   }
 
-  const datasource = new DataSource({
+  const appDataSource = new DataSource({
     type: "sqlite",
     database: "titanic.db",
-    synchronize: true,
   });
 
-  const db = await SqlDatabase.fromDataSourceParams({
-    appDataSource: datasource,
+  const database = await SqlDatabase.fromDataSourceParams({
+    appDataSource,
   });
+
+  const llm = new OpenAI({ temperature: 0 });
 
   const chain = new SqlDatabaseChain({
-    llm: new OpenAI({ temperature: 0 }),
-    database: db,
+    llm,
+    database,
   });
 
   const data = await chain.run(question);
