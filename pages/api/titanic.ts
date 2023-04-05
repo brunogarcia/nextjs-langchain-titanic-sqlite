@@ -20,11 +20,13 @@ export default async function handler(
 ) {
   const { question } = req.body;
 
-  const noValidQuestion = !question || question.length === 0;
+  const isValidQuestion = Boolean(question) && question.length > 0;
 
-  if (noValidQuestion) {
-    res.status(400).json({ answer: "No question provided" });
+  if (!isValidQuestion) {
+    res.status(400).json({ answer: "Please enter a valid question" });
   }
+
+  const llm = new OpenAI({ temperature: 0 });
 
   const appDataSource = new DataSource({
     type: "sqlite",
@@ -34,8 +36,6 @@ export default async function handler(
   const database = await SqlDatabase.fromDataSourceParams({
     appDataSource,
   });
-
-  const llm = new OpenAI({ temperature: 0 });
 
   const chain = new SqlDatabaseChain({
     llm,
