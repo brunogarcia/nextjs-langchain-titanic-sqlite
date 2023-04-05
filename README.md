@@ -2,7 +2,7 @@
 
 ## Description
 
-The main goal of both projects is to research about the LangChain library and the API of OpenAI using the Titanic SQLite database.
+The main goal of this project is to research about the [LangChain](https://python.langchain.com/) library and the [API of OpenAI](https://openai.com/blog/openai-api) using the Titanic SQLite database.
 
 ![How Is It Work?](how-is-it-work.png)
 
@@ -12,6 +12,7 @@ The main goal of both projects is to research about the LangChain library and th
   The total cost of the research was $0.36.
 - Then, the [LangChain](https://python.langchain.com/) library allows me to connect the OpenAI API and the Titanic Database in a very simple way.
 - Finally, [Next.js](https://nextjs.org/) let me create a simple web application that allows the final user to interact with the database in a natural language.
+- I made a similar approach with a [Jupyter Notebook](https://github.com/brunogarcia/langchain-titanic-sqlite).
 
 ## Database
 
@@ -58,8 +59,8 @@ The app and the notebook are able to answer the following questions in natural l
 ### Example #2: How many passengers were in each class?
 
 ```html
-There were 216 passengers in first class, 184 passengers in second class, and 491 passengers in
-third class.
+There were 216 passengers in first class, 184 passengers in second class, and
+491 passengers in third class.
 ```
 
 ## Run on development mode
